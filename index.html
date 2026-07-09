@@ -12,7 +12,7 @@
     
     <style>
         :root {
-            --primary: #d97706; /* 整備工場向けの力強いオレンジ・ゴールド系 */
+            --primary: #d97706;
             --primary-hover: #b45309;
             --primary-light: #fffbeb;
             --dark: #0f172a;
@@ -60,6 +60,10 @@
         .price-label { font-size: 13px; color: var(--gray-light); }
         .price-main { font-size: 38px; font-weight: 900; color: #5ef050; display: flex; align-items: baseline; gap: 8px; }
         .price-sub { font-size: 14px; color: var(--gray-light); font-weight: normal; }
+
+        .grid { display: grid; gap: 20px; }
+        .grid-3 { grid-template-columns: repeat(3, 1fr); }
+        @media (max-width: 768px) { .grid-3 { grid-template-columns: 1fr; } }
 
         /* Features */
         .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 30px; }
@@ -129,9 +133,11 @@
                 </div>
                 <a href="#order" class="btn btn-primary btn-lg"><i class="fa-solid fa-cart-shopping"></i> 今すぐ注文・購入手続きへ</a>
             </div>
+            
+            <!-- 💡 画像枠 1: メイン画像 -->
             <div>
-                <div style="background: var(--white); border-radius: 16px; padding: 20px; color: var(--dark); text-align: center; box-shadow: var(--shadow-lg);">
-                    <i class="fa-solid fa-microchip" style="font-size: 80px; color: var(--primary); margin: 20px 0;"></i>
+                <div style="background: var(--white); border-radius: 16px; padding: 30px; color: var(--dark); text-align: center; box-shadow: var(--shadow-lg);">
+                    <img src="v200-main.jpg" onerror="this.src='https://placehold.co/400x300/f1f5f9/94a3b8?text=Main+Image+Here'" alt="Autel MaxiVCI V200 本体" style="max-height: 250px; margin: 0 auto 15px auto; border-radius: 8px;">
                     <h2 style="font-size: 18px; font-weight: 900;">Autel MaxiVCI V200</h2>
                     <p style="font-size: 12px; color: var(--gray); margin-top: 5px;">Bluetooth / USB接続対応 自動車診断インターフェース</p>
                 </div>
@@ -163,10 +169,30 @@
         </div>
     </section>
 
-    <!-- Specs & Notice -->
-    <section style="background-color: var(--white);">
+    <!-- 💡 新機能：画像ギャラリー -->
+    <section style="background-color: var(--white); padding-bottom: 20px; border-bottom: none;">
         <div class="container">
-            <h2 style="text-align: center; font-size: 22px; font-weight: 900; margin-bottom: 20px;">商品仕様・注意事項</h2>
+            <h2 style="text-align: center; font-size: 22px; font-weight: 900; margin-bottom: 30px;">製品イメージ</h2>
+            <div class="grid grid-3">
+                <!-- 💡 画像枠 2: ギャラリー1 -->
+                <div style="background: var(--bg-light); padding: 15px; border-radius: 12px; border: 1px solid var(--gray-light); box-shadow: var(--shadow-sm);">
+                    <img src="v200-gallery1.jpg" onerror="this.src='https://placehold.co/300x200/e2e8f0/64748b?text=Gallery+1'" alt="V200 イメージ1" style="border-radius: 8px; width: 100%; object-fit: cover;">
+                </div>
+                <!-- 💡 画像枠 3: ギャラリー2 -->
+                <div style="background: var(--bg-light); padding: 15px; border-radius: 12px; border: 1px solid var(--gray-light); box-shadow: var(--shadow-sm);">
+                    <img src="v200-gallery2.jpg" onerror="this.src='https://placehold.co/300x200/e2e8f0/64748b?text=Gallery+2'" alt="V200 イメージ2" style="border-radius: 8px; width: 100%; object-fit: cover;">
+                </div>
+                <!-- 💡 画像枠 4: ギャラリー3 -->
+                <div style="background: var(--bg-light); padding: 15px; border-radius: 12px; border: 1px solid var(--gray-light); box-shadow: var(--shadow-sm);">
+                    <img src="v200-gallery3.jpg" onerror="this.src='https://placehold.co/300x200/e2e8f0/64748b?text=Gallery+3'" alt="V200 イメージ3" style="border-radius: 8px; width: 100%; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specs & Notice -->
+    <section style="background-color: var(--white); padding-top: 10px;">
+        <div class="container">
             <div class="spec-box">
                 <table class="spec-table">
                     <tr><th>商品名</th><td>Autel MaxiVCI V200（並行輸入品・純正品）</td></tr>
