@@ -114,7 +114,6 @@
 </head>
 <body>
 
-    <!-- Header -->
     <header>
         <div class="container">
             <div class="logo">
@@ -124,7 +123,6 @@
         </div>
     </header>
 
-    <!-- Hero -->
     <section class="hero">
         <div class="container hero-grid">
             <div>
@@ -149,7 +147,6 @@
                 <a href="#order" class="btn btn-primary btn-lg"><i class="fa-solid fa-cart-shopping"></i> 今すぐ注文・購入手続きへ</a>
             </div>
             
-            <!-- メイン画像 -->
             <div>
                 <div style="background: var(--white); border-radius: 16px; padding: 30px; color: var(--dark); text-align: center; box-shadow: var(--shadow-lg);">
                     <img src="v200-main.jpg" onerror="this.src='https://placehold.co/400x300/f1f5f9/94a3b8?text=Main+Image+Here'" alt="Autel MaxiVCI V200 本体" style="max-height: 250px; margin: 0 auto 15px auto; border-radius: 8px;">
@@ -160,7 +157,6 @@
         </div>
     </section>
 
-    <!-- Features -->
     <section>
         <div class="container">
             <h2 style="text-align: center; font-size: 22px; font-weight: 900;">本サイトが選ばれる3つの理由</h2>
@@ -184,7 +180,6 @@
         </div>
     </section>
 
-    <!-- 画像ギャラリー -->
     <section style="background-color: var(--white); padding-bottom: 20px; border-bottom: none;">
         <div class="container">
             <h2 style="text-align: center; font-size: 22px; font-weight: 900; margin-bottom: 30px;">製品イメージ</h2>
@@ -202,7 +197,6 @@
         </div>
     </section>
 
-    <!-- Specs & Notice -->
     <section style="background-color: var(--white); padding-top: 10px;">
         <div class="container">
             <div class="spec-box">
@@ -219,7 +213,6 @@
         </div>
     </section>
 
-    <!-- よくあるご質問（Q&A） -->
     <section style="background-color: var(--bg-light);">
         <div class="container">
             <h2 style="text-align: center; font-size: 22px; font-weight: 900;">よくあるご質問 (Q&A)</h2>
@@ -244,7 +237,6 @@
         </div>
     </section>
 
-    <!-- Order Form -->
     <section id="order">
         <div class="container">
             <div class="contact-wrapper">
@@ -310,7 +302,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <p>&copy; DEPARTURES 株式会社 All Rights Reserved.</p>
@@ -321,8 +312,6 @@
         </div>
     </footer>
 
-    <!-- Modals -->
-    <!-- 注文確認モーダル -->
     <div class="modal-overlay" id="confirm-modal">
         <div class="modal-box">
             <h3 style="font-size: 18px; font-weight: 900; margin-bottom: 10px;"><i class="fa-solid fa-clipboard-check" style="color:var(--primary);"></i> ご注文内容の確認</h3>
@@ -347,7 +336,6 @@
         </div>
     </div>
 
-    <!-- 特商法モーダル -->
     <div class="modal-overlay" id="legal-modal">
         <div class="modal-box">
             <h3 style="font-size: 16px; font-weight: bold; margin-bottom: 15px;">特定商取引法に基づく表記</h3>
@@ -364,7 +352,6 @@
         </div>
     </div>
 
-    <!-- プライバシーポリシーモーダル -->
     <div class="modal-overlay" id="privacy-modal">
         <div class="modal-box">
             <h3 style="font-size: 16px; font-weight: bold; margin-bottom: 15px;">プライバシーポリシー</h3>
@@ -376,11 +363,11 @@
     </div>
 
     <script>
-        // 💡 ご提示いただいた Stripeの決済リンクURLを設定済み
+        // Stripeの決済リンクURL
         var STRIPE_PAYMENT_URL = "https://buy.stripe.com/5kQaEQ9NX0NL8640XT6EU02";
         
-        // 💡 ★ここに V200用に新作成した Google App Script の WebアプリURLを貼り付けてください★
-        var GAS_WEB_APP_URL = "https://script.google.com/macros/s/https://script.google.com/macros/s/AKfycbw_M3u1qRxZs2qVr2-crtDK5OTkxiJAxcdNxemFUgCxdeOpo5Q1PDyrrbghzNvU9PQj/exec";
+        // 修正版 Google App Script の WebアプリURL
+        var GAS_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbw_M3u1qRxZs2qVr2-crtDK5OTkxiJAxcdNxemFUgCxdeOpo5Q1PDyrrbghzNvU9PQj/exec";
 
         function openModal(id) { document.getElementById(id).classList.add('open'); }
         function closeModal(id) { document.getElementById(id).classList.remove('open'); }
