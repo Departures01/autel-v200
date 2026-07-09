@@ -60,6 +60,10 @@
         .price-label { font-size: 13px; color: var(--gray-light); }
         .price-main { font-size: 38px; font-weight: 900; color: #5ef050; display: flex; align-items: baseline; gap: 8px; }
         .price-sub { font-size: 14px; color: var(--gray-light); font-weight: normal; }
+        
+        /* カード決済バッジ */
+        .card-pay-info { display: flex; align-items: center; gap: 8px; font-size: 12px; color: #cbd5e1; margin-top: 10px; border-top: 1px dashed rgba(255,255,255,0.15); padding-top: 10px; }
+        .card-pay-info i { color: #fbbf24; }
 
         .grid { display: grid; gap: 20px; }
         .grid-3 { grid-template-columns: repeat(3, 1fr); }
@@ -130,11 +134,15 @@
                     <div class="price-main">
                         ￥29,800 <span class="price-sub">（送料 全国一律 ￥1,100）</span>
                     </div>
+                    <!-- 💡 クレジットカード決済専用の注記を追加 -->
+                    <div class="card-pay-info">
+                        <i class="fa-solid fa-credit-card"></i> <b>お支払い方法：クレジットカード決済専用</b>（VISA / Master / JCB / AMEX）
+                    </div>
                 </div>
                 <a href="#order" class="btn btn-primary btn-lg"><i class="fa-solid fa-cart-shopping"></i> 今すぐ注文・購入手続きへ</a>
             </div>
             
-            <!-- 💡 画像枠 1: メイン画像 -->
+            <!-- メイン画像 -->
             <div>
                 <div style="background: var(--white); border-radius: 16px; padding: 30px; color: var(--dark); text-align: center; box-shadow: var(--shadow-lg);">
                     <img src="v200-main.jpg" onerror="this.src='https://placehold.co/400x300/f1f5f9/94a3b8?text=Main+Image+Here'" alt="Autel MaxiVCI V200 本体" style="max-height: 250px; margin: 0 auto 15px auto; border-radius: 8px;">
@@ -156,9 +164,9 @@
                     <p>海外発送のロスタイムなし。日本国内（DEPARTURES株式会社）倉庫に在庫があるため、決済完了後すぐに発送手配を行います。</p>
                 </div>
                 <div class="feature-card">
-                    <div class="feature-icon"><i class="fa-solid fa-tags"></i></div>
-                    <h3>圧倒的なコストパフォーマンス</h3>
-                    <p>中間マージンをカットした独自の海外直行調達により、税込29,800円の圧倒的低価格を実現。整備工場の設備投資費用を最小限に抑えます。</p>
+                    <div class="feature-icon"><i class="fa-solid fa-credit-card"></i></div>
+                    <h3>クレジット決済で即時出荷</h3>
+                    <p>お支払いは各種クレジットカード決済（Stripe）に対応。お振込み確認の手間なく、ご注文後すぐにスピーディに発送手配へと移行します。</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon"><i class="fa-solid fa-file-invoice"></i></div>
@@ -169,20 +177,17 @@
         </div>
     </section>
 
-    <!-- 💡 新機能：画像ギャラリー -->
+    <!-- 画像ギャラリー -->
     <section style="background-color: var(--white); padding-bottom: 20px; border-bottom: none;">
         <div class="container">
             <h2 style="text-align: center; font-size: 22px; font-weight: 900; margin-bottom: 30px;">製品イメージ</h2>
             <div class="grid grid-3">
-                <!-- 💡 画像枠 2: ギャラリー1 -->
                 <div style="background: var(--bg-light); padding: 15px; border-radius: 12px; border: 1px solid var(--gray-light); box-shadow: var(--shadow-sm);">
                     <img src="v200-gallery1.jpg" onerror="this.src='https://placehold.co/300x200/e2e8f0/64748b?text=Gallery+1'" alt="V200 イメージ1" style="border-radius: 8px; width: 100%; object-fit: cover;">
                 </div>
-                <!-- 💡 画像枠 3: ギャラリー2 -->
                 <div style="background: var(--bg-light); padding: 15px; border-radius: 12px; border: 1px solid var(--gray-light); box-shadow: var(--shadow-sm);">
                     <img src="v200-gallery2.jpg" onerror="this.src='https://placehold.co/300x200/e2e8f0/64748b?text=Gallery+2'" alt="V200 イメージ2" style="border-radius: 8px; width: 100%; object-fit: cover;">
                 </div>
-                <!-- 💡 画像枠 4: ギャラリー3 -->
                 <div style="background: var(--bg-light); padding: 15px; border-radius: 12px; border: 1px solid var(--gray-light); box-shadow: var(--shadow-sm);">
                     <img src="v200-gallery3.jpg" onerror="this.src='https://placehold.co/300x200/e2e8f0/64748b?text=Gallery+3'" alt="V200 イメージ3" style="border-radius: 8px; width: 100%; object-fit: cover;">
                 </div>
@@ -198,6 +203,7 @@
                     <tr><th>商品名</th><td>Autel MaxiVCI V200（並行輸入品・純正品）</td></tr>
                     <tr><th>同梱内容</th><td><b>V200本体のみ</b><br><span style="font-size: 12px; color: var(--red);">※PC接続用USBケーブル等は同梱されておりません。ご購入者様にてご用意ください。</span></td></tr>
                     <tr><th>対応用途</th><td>自動車OBD2診断、OBD検査（電子車検証・車検業務等）</td></tr>
+                    <tr><th>お支払い方法</th><td><b>クレジットカード決済のみ</b>（VISA / MasterCard / JCB / American Express / Diners / Discover）</td></tr>
                     <tr><th>発送元</th><td>DEPARTURES株式会社（日本国内倉庫より発送）</td></tr>
                     <tr><th>初期不良保証</th><td><b>商品到着後3日以内</b>に検品をお願いいたします。万が一の初期不良（通電不能等）につきましては、到着後3日以内にご連絡いただいた場合のみ無償交換または返金対応をさせていただきます。</td></tr>
                 </table>
@@ -216,6 +222,13 @@
                     <div class="form-group">
                         <label>ご注文商品</label>
                         <input type="text" class="form-control" value="Autel MaxiVCI V200 × 1台 （￥29,800 ＋ 送料￥1,100 ＝ 計￥30,900 税込）" readonly style="background: var(--bg-light); font-weight: bold;">
+                    </div>
+
+                    <div class="form-group">
+                        <label>お支払い方法</label>
+                        <div style="background: var(--bg-light); padding: 10px 12px; border: 1px solid var(--gray-light); border-radius: 6px; font-size: 13px; font-weight: bold; color: var(--gray-dark); display: flex; align-items: center; gap: 8px;">
+                            <i class="fa-solid fa-lock" style="color: var(--primary);"></i> クレジットカード決済（Stripeオンライン安全決済）
+                        </div>
                     </div>
                     
                     <div class="form-group">
@@ -284,6 +297,7 @@
             <table class="confirm-table">
                 <tr><th>ご注文商品</th><td>Autel MaxiVCI V200 × 1台</td></tr>
                 <tr><th>お支払い合計</th><td style="font-weight: bold; color: var(--red);">￥30,900 （本体￥29,800 ＋ 送料￥1,100 税込）</td></tr>
+                <tr><th>お支払い方法</th><td>クレジットカード決済</td></tr>
                 <tr><th>貴社名 / 屋号</th><td id="c-company"></td></tr>
                 <tr><th>お名前</th><td id="c-name"></td></tr>
                 <tr><th>メールアドレス</th><td id="c-email"></td></tr>
@@ -377,17 +391,14 @@
                 message: document.getElementById('f-message').value
             };
 
-            // GASへ顧客注文データを送信
             fetch(GAS_WEB_APP_URL, {
                 method: "POST",
                 mode: "no-cors",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData)
             }).then(function() {
-                // 送信完了後、そのままStripeのクレジット決済画面へ自動ジャンプ！
                 window.location.href = STRIPE_PAYMENT_URL;
             }).catch(function() {
-                // 万が一の通信エラー時も決済画面へジャンプさせて機会損失を防ぐ
                 window.location.href = STRIPE_PAYMENT_URL;
             });
         }
