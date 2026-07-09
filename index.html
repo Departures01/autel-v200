@@ -402,21 +402,22 @@
             btn.disabled = true;
             btn.innerText = "処理中...";
 
-            var formData = {
-                company: document.getElementById('f-company').value,
-                name: document.getElementById('f-name').value,
-                email: document.getElementById('f-email').value,
-                phone: document.getElementById('f-phone').value,
-                zip: document.getElementById('f-zip').value,
-                address: document.getElementById('f-address').value,
-                message: document.getElementById('f-message').value
-            };
+            // フォーム形式でデータを組み立て
+            var formData = new URLSearchParams();
+            formData.append("company", document.getElementById('f-company').value);
+            formData.append("name", document.getElementById('f-name').value);
+            formData.append("email", document.getElementById('f-email').value);
+            formData.append("phone", document.getElementById('f-phone').value);
+            formData.append("zip", document.getElementById('f-zip').value);
+            formData.append("address", document.getElementById('f-address').value);
+            formData.append("message", document.getElementById('f-message').value);
 
+            // GASへ確実にデータを届ける設定で送信
             fetch(GAS_WEB_APP_URL, {
                 method: "POST",
                 mode: "no-cors",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(formData)
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: formData.toString()
             }).then(function() {
                 window.location.href = STRIPE_PAYMENT_URL;
             }).catch(function() {
